@@ -1,5 +1,5 @@
 
-# 🌷 BLOOMING
+#  BLOOMING
 
 ## Inventory & Sales Management System
 
@@ -141,7 +141,6 @@ php artisan migrate --seed
 |---|---|---|
 | Admin | `admin@blooming.com` | Sesuai seeder |
 | Staff | `staff@blooming.com` | Sesuai seeder |
-| User | `user@blooming.com` | Sesuai seeder |
 
 
 
