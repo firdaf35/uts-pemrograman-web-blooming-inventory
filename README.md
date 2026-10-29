@@ -1,142 +1,132 @@
-BLOOMING
+<div align="center">🌷 BLOOMING
 
 Inventory & Sales Management System
 
 Aplikasi Manajemen Inventaris dan Penjualan Florist Berbasis Web
 
-Dibangun menggunakan Laravel dan MySQL untuk membantu pengelolaan data bunga, persediaan, pembelian, penjualan, dan laporan pada usaha florist.
+""Laravel" (https://img.shields.io/badge/Laravel-Framework-FF2D55?style=for-the-badge&logo=laravel&logoColor=white)" (https://laravel.com/)
+""PHP" (https://img.shields.io/badge/PHP-Backend-777BB4?style=for-the-badge&logo=php&logoColor=white)" (https://www.php.net/)
+""MySQL" (https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)" (https://www.mysql.com/)
+""UTS" (https://img.shields.io/badge/Project-UTS%20Pemrograman%20Web%202-9B4965?style=for-the-badge)" (#)
 
----
+Grow with grace. Manage with care.
 
-1. Project Overview
+</div>---
 
-Deskripsi Proyek
+📌 1. Project Overview
 
-Blooming Inventory & Sales Management System merupakan aplikasi berbasis web yang dirancang untuk mendukung pengelolaan inventaris dan transaksi pada usaha florist. Aplikasi ini membantu pengguna dalam mengelola data produk, kategori, pemasok, pembelian, penjualan, serta memantau ketersediaan stok barang.
+Blooming Inventory & Sales Management System merupakan aplikasi berbasis web untuk membantu pengelolaan inventaris dan transaksi pada usaha florist.
 
-Proyek ini dikembangkan menggunakan framework Laravel dengan pendekatan Model–View–Controller (MVC), database MySQL, Eloquent ORM, autentikasi pengguna, otorisasi berdasarkan role, validasi data, dan logika transaksi.
+Aplikasi ini dikembangkan menggunakan Laravel dan MySQL dengan menerapkan konsep Model–View–Controller (MVC), Eloquent ORM, autentikasi, otorisasi berbasis role, validasi data, dan logika transaksi untuk menjaga konsistensi stok.
 
-Tujuan
+🎯 Tujuan Proyek
 
 - Mempermudah pengelolaan data inventaris florist.
-- Menerapkan operasi CRUD pada data master.
+- Mengimplementasikan operasi CRUD pada data master.
 - Mengelola transaksi pembelian dan penjualan.
 - Menjaga konsistensi stok berdasarkan transaksi.
-- Menerapkan autentikasi dan pembatasan akses pengguna.
-- Menyediakan dashboard dan laporan untuk membantu pemantauan operasional.
+- Menerapkan autentikasi dan pembatasan hak akses.
+- Menyediakan dashboard dan laporan untuk mendukung pemantauan operasional.
 
-Informasi Proyek
+🗂️ Informasi Proyek
 
 Informasi| Keterangan
 Nama Aplikasi| Blooming
-Jenis Aplikasi| Inventory & Sales Management System
+Nama Proyek| Blooming Inventory & Sales Management System
+Mata Kuliah| Pemrograman Web 2
+Jenis Tugas| Ujian Tengah Semester (UTS)
 Framework| Laravel
 Bahasa Pemrograman| PHP
 Database| MySQL
 ORM| Eloquent ORM
 Frontend| Blade, HTML, CSS
-Lingkungan Pengembangan| XAMPP dan Visual Studio Code
+Tools| XAMPP, Visual Studio Code, Git, GitHub
 
 ---
 
-2. Requirements
+🛠️ 2. Requirements
 
-Pastikan perangkat sudah memiliki perangkat lunak berikut.
+Pastikan perangkat telah memiliki perangkat lunak berikut sebelum menjalankan aplikasi.
 
-Komponen| Keterangan
-PHP| Versi yang kompatibel dengan versi Laravel proyek
-Composer| Untuk mengelola dependensi PHP
-MySQL| Database melalui XAMPP
-Laravel| Framework aplikasi
-Node.js dan npm| Untuk instalasi dependensi frontend dan kompilasi aset Vite, jika diperlukan
-Visual Studio Code| Editor kode
-Web Browser| Untuk menjalankan aplikasi
+Komponen| Kegunaan
+PHP| Menjalankan aplikasi Laravel
+Composer| Mengelola dependensi PHP
+Laravel| Framework pengembangan aplikasi
+MySQL| Menyimpan data aplikasi
+XAMPP| Menyediakan server lokal dan MySQL
+Visual Studio Code| Editor kode program
+Git| Mengelola versi kode
+Node.js dan npm| Mengelola dependensi frontend jika diperlukan
 
-Catatan: Versi PHP yang digunakan harus sesuai dengan persyaratan pada "composer.json" dan versi Laravel di proyek.
+«Catatan: Versi PHP dan Composer harus sesuai dengan kebutuhan Laravel pada proyek. Periksa "composer.json" untuk persyaratan versi yang tepat.»
 
 ---
 
-3. Installation
+⚙️ 3. Installation
 
-Ikuti langkah-langkah berikut untuk menjalankan proyek pada Windows.
+Ikuti langkah-langkah berikut untuk memasang aplikasi di lingkungan lokal Windows.
 
-Langkah 1 — Menyiapkan Proyek
-
-Clone repository dari GitHub:
+Step 1 — Clone Repository
 
 git clone <URL_REPOSITORY>
 
 Masuk ke direktori proyek:
 
-cd blooming
+cd uts-pemrograman-web-2-blooming-inventory
 
-Jika proyek sudah berada di komputer, buka folder proyek tersebut melalui Visual Studio Code.
+Jika proyek sudah tersedia di komputer, buka folder proyek melalui Visual Studio Code.
 
-Langkah 2 — Menginstal Dependensi PHP
+Step 2 — Install Dependencies
 
-Jalankan:
+Jalankan perintah berikut untuk menginstal dependensi PHP:
 
 composer install
 
-Perintah ini menginstal dependensi PHP yang dibutuhkan aplikasi.
-
-Langkah 3 — Menyiapkan File Environment
+Step 3 — Setup Environment
 
 Salin file ".env.example" menjadi ".env".
 
-Pada Windows PowerShell:
+Untuk Windows PowerShell:
 
 Copy-Item .env.example .env
 
-Langkah 4 — Membuat Application Key
-
-Jalankan:
+Buat application key:
 
 php artisan key:generate
 
-Jika PHP belum terdaftar pada PATH Windows dan menggunakan instalasi XAMPP di "C:\xampp", gunakan:
+Step 4 — Setup Database
 
-& "C:\xampp\php\php.exe" artisan key:generate
+1. Buka XAMPP Control Panel.
+2. Jalankan Apache dan MySQL.
+3. Buka "http://localhost/phpmyadmin".
+4. Buat database dengan nama "blooming".
+5. Sesuaikan konfigurasi database di file ".env".
 
-Langkah 5 — Menyiapkan Database
+Step 5 — Run Migration and Seeder
 
-Nyalakan Apache dan MySQL melalui XAMPP Control Panel.
+Setelah konfigurasi database selesai, jalankan:
 
-Buka phpMyAdmin melalui:
+php artisan migrate --seed
 
-"http://localhost/phpmyadmin"
+Perintah tersebut menjalankan migration dan seeder untuk membuat tabel serta mengisi data awal yang telah didefinisikan pada proyek.
 
-Buat database baru dengan nama:
-
-"blooming"
-
-Konfigurasikan koneksi database pada file ".env" sesuai pengaturan MySQL lokal.
-
-Langkah 6 — Menjalankan Migrasi dan Seeder
-
-Pastikan konfigurasi database sudah benar, kemudian ikuti bagian Migration & Seeding.
-
-Langkah 7 — Menjalankan Aplikasi
+Step 6 — Run Application
 
 Jalankan server Laravel:
 
 php artisan serve
 
-Jika menggunakan PHP bawaan XAMPP:
+Buka browser dan akses:
 
-& "C:\xampp\php\php.exe" artisan serve
-
-Buka aplikasi melalui:
-
-"http://127.0.0.1:8000"
+http://127.0.0.1:8000
 
 ---
 
-4. Environment Setup
+🔧 4. Environment Setup
 
-Konfigurasikan file ".env" sesuai lingkungan pengembangan lokal.
+Konfigurasikan file ".env" sesuai pengaturan lokal.
 
-Contoh konfigurasi:
+Contoh konfigurasi database:
 
 APP_NAME=Blooming
 APP_ENV=local
@@ -150,161 +140,159 @@ DB_DATABASE=blooming
 DB_USERNAME=root
 DB_PASSWORD=
 
-Perhatian:
+Important Notes
 
-- Sesuaikan nama database, username, password, dan port dengan konfigurasi MySQL pada komputer.
-- "APP_DEBUG=true" hanya digunakan selama pengembangan lokal.
-- Jangan mengunggah file ".env" yang berisi kredensial ke repository GitHub.
-- Repository harus menyediakan ".env.example" tanpa informasi rahasia.
+- Sesuaikan username, password, dan port MySQL dengan konfigurasi XAMPP.
+- "APP_DEBUG=true" hanya digunakan untuk pengembangan lokal.
+- Jangan mengunggah file ".env" ke GitHub karena dapat berisi informasi rahasia.
+- Gunakan ".env.example" untuk menyediakan contoh konfigurasi tanpa kredensial pribadi.
 
 ---
 
-5. Migration & Seeding
+🗄️ 5. Migration & Seeding
 
-Laravel menyediakan migration untuk membentuk struktur tabel database dan seeder untuk mengisi data awal.
+Laravel menggunakan migration untuk membangun struktur database dan seeder untuk menyiapkan data awal.
 
 Menjalankan Migration
 
 php artisan migrate
 
-Perintah ini menjalankan migration yang belum diterapkan pada database.
-
 Menjalankan Seeder
 
 php artisan db:seed
 
-Seeder digunakan untuk menyiapkan data awal yang telah didefinisikan pada proyek, seperti kategori, produk, pemasok, dan akun demo apabila tersedia dalam seeder.
-
 Menjalankan Migration dan Seeder Sekaligus
-
-Untuk database baru:
 
 php artisan migrate --seed
 
-Reset Database untuk Pengembangan
-
-Peringatan: perintah berikut menghapus tabel yang ada beserta datanya, kemudian menjalankan ulang migration dan seeder.
+Reset Database
 
 php artisan migrate:fresh --seed
 
-Gunakan hanya jika memang ingin mereset database lokal dan tidak ada data yang perlu dipertahankan.
+«⚠️ Peringatan: "migrate:fresh --seed" akan menghapus seluruh tabel beserta datanya sebelum membuat ulang database. Gunakan hanya jika memang ingin melakukan reset.»
 
 ---
 
-6. Demo Account
+👥 6. Demo Account
 
-Aplikasi menyediakan akun demo untuk pengujian berdasarkan role pengguna.
+Aplikasi menyediakan akun demo untuk menguji hak akses berdasarkan role.
 
 Role| Email| Password
 Admin| "admin@blooming.com"| "BloomingAdmin2026!"
 Staff| "staff@blooming.com"| "StaffBlooming2026!"
 User| "user@blooming.com"| "UserBlooming2026!"
 
-Catatan: akun demo tersebut harus tersedia melalui seeder proyek. Jika kredensial pada seeder berbeda, gunakan akun dan password yang benar-benar dibuat oleh seeder.
+«Penting: kredensial di atas harus sesuai dengan akun yang benar-benar dibuat oleh seeder proyek. Jika berbeda, gunakan kredensial yang berlaku pada database lokal.»
 
-Akun demo digunakan untuk keperluan pengujian aplikasi. Jangan menggunakan kredensial pribadi atau password produksi sebagai akun demo.
+Akun demo digunakan untuk keperluan pengujian aplikasi dan bukan untuk penggunaan produksi.
 
 ---
 
-7. Features
+✨ 7. Features
 
-A. Authentication
+🔐 Authentication & Authorization
 
-- Login pengguna.
-- Logout pengguna.
-- Akses halaman aplikasi untuk pengguna yang telah terautentikasi.
+- Login dan logout pengguna.
+- Autentikasi untuk mengakses halaman aplikasi.
 - Pembatasan akses berdasarkan role.
+- Halaman khusus untuk akses terbatas dan halaman tidak ditemukan.
 
-B. Dashboard
+📊 Dashboard
 
 - Menampilkan ringkasan informasi inventaris.
-- Menyediakan navigasi ke modul aplikasi sesuai hak akses.
+- Menyediakan navigasi ke fitur aplikasi sesuai hak akses.
 
-C. Master Data
+🌸 Master Data
 
-- Kategori: melihat dan mengelola kategori produk.
-- Produk: mengelola data produk dan persediaan.
-- Supplier: mengelola data pemasok.
+Modul| Fitur
+Kategori| Melihat, menambah, mengubah, dan menghapus kategori sesuai hak akses
+Produk| Mengelola data produk dan informasi persediaan
+Supplier| Mengelola data pemasok
 
-D. Pembelian
+📦 Pembelian
 
 - Menampilkan daftar transaksi pembelian.
 - Membuat transaksi pembelian.
-- Menampilkan detail transaksi.
-- Menambah stok berdasarkan transaksi pembelian yang berhasil.
-- Membatalkan transaksi sesuai hak akses dan aturan stok yang diterapkan.
+- Menampilkan detail pembelian.
+- Menambahkan stok melalui transaksi pembelian yang berhasil.
+- Membatalkan transaksi sesuai hak akses dan aturan stok.
 
-E. Penjualan
+🛍️ Penjualan
 
 - Menampilkan daftar transaksi penjualan.
 - Membuat transaksi penjualan.
-- Menampilkan detail transaksi.
-- Memvalidasi ketersediaan stok sebelum penjualan.
+- Menampilkan detail penjualan.
+- Memvalidasi stok sebelum transaksi diproses.
 - Mengurangi stok ketika transaksi berhasil.
-- Membatalkan transaksi sesuai hak akses dan aturan pengembalian stok yang diterapkan.
+- Membatalkan transaksi sesuai hak akses dan aturan pengembalian stok.
 
-F. Laporan
+📑 Laporan
 
 - Menampilkan laporan transaksi sesuai implementasi aplikasi.
-- Membatasi akses laporan berdasarkan role.
+- Membatasi akses laporan berdasarkan role pengguna.
 
-G. User Management
+👤 Manajemen Pengguna
 
-- Menampilkan dan mengelola akun pengguna sesuai hak akses admin.
+- Melihat daftar akun.
+- Menambah, mengubah, dan menghapus akun sesuai hak akses admin.
 
-H. Authorization dan Validasi
+🛡️ Validasi & Konsistensi Data
 
-- Middleware untuk membatasi akses berdasarkan role.
 - Validasi input pada sisi server.
-- Pesan sukses dan kesalahan untuk membantu pengguna memahami hasil operasi.
-- Perlindungan terhadap akses halaman yang tidak diizinkan.
+- Pesan sukses dan kesalahan yang mudah dipahami.
+- Middleware untuk otorisasi.
+- Proteksi CSRF melalui mekanisme Laravel.
+- Penggunaan Eloquent ORM untuk interaksi dengan database.
 
 ---
 
-8. Known Limitations
+⚠️ 8. Known Limitations
 
-Beberapa hal yang perlu diperhatikan selama pengembangan dan pengujian:
-
-1. Aplikasi masih dijalankan pada lingkungan pengembangan lokal menggunakan XAMPP dan Laravel development server.
-2. Ketersediaan fitur bergantung pada implementasi controller, model, migration, seeder, dan route yang terdapat pada repository.
-3. Akun demo hanya dapat digunakan apabila telah dibuat melalui seeder atau mekanisme inisialisasi akun yang tersedia.
-4. Data laporan bergantung pada transaksi yang tersimpan di database.
-5. Hak akses setiap role mengikuti konfigurasi middleware dan route aplikasi.
-6. Aplikasi belum dapat dianggap siap produksi sebelum dilakukan pengujian keamanan, validasi transaksi, dan konfigurasi deployment.
+1. Aplikasi dikembangkan untuk lingkungan lokal dan belum dikonfigurasi untuk deployment produksi.
+2. Fitur yang tersedia bergantung pada implementasi controller, model, migration, seeder, dan route dalam repository.
+3. Akun demo harus tersedia melalui seeder atau mekanisme inisialisasi akun.
+4. Data laporan bergantung pada data transaksi yang tersimpan di database.
+5. Hak akses pengguna mengikuti konfigurasi middleware dan route aplikasi.
+6. Pengujian menyeluruh dan konfigurasi keamanan tambahan tetap diperlukan sebelum aplikasi digunakan pada lingkungan produksi.
 
 ---
 
-Teknologi yang Digunakan
+🧪 Testing & Documentation
 
-- Laravel
-- PHP
-- MySQL
-- Eloquent ORM
-- Blade Template Engine
-- HTML dan CSS
-- XAMPP
-- Visual Studio Code
-- Git dan GitHub
+Dokumentasi pengujian dan screenshot aplikasi dapat ditambahkan pada repository untuk mendukung proses penilaian.
+
+Contoh struktur folder dokumentasi:
+
+docs/
+├── ERD.png
+├── screenshots/
+│   ├── dashboard.png
+│   ├── products.png
+│   ├── purchases.png
+│   └── sales.png
+└── test-cases.md
+
+Tambahkan file dokumentasi dan screenshot setelah benar-benar tersedia di repository.
 
 ---
 
-Menjalankan Aplikasi Secara Singkat
+📚 Technologies Used
 
-Setelah konfigurasi awal selesai, jalankan:
+- Laravel — Framework backend.
+- PHP — Bahasa pemrograman.
+- MySQL — Sistem manajemen database.
+- Eloquent ORM — Pengelolaan data dan relasi.
+- Blade — Template engine Laravel.
+- HTML & CSS — Antarmuka aplikasi.
+- XAMPP — Lingkungan server lokal.
+- Git & GitHub — Version control dan penyimpanan repository.
 
-composer install
-php artisan optimize:clear
-php artisan migrate --seed
-php artisan serve
+---
 
-Kemudian buka "http://127.0.0.1:8000" melalui browser.
+<div align="center">🌷 BLOOMING
 
-Jika menggunakan PHP XAMPP yang belum terdaftar pada PATH, ganti perintah "php artisan" dengan:
-
-& "C:\xampp\php\php.exe" artisan optimize:clear
-& "C:\xampp\php\php.exe" artisan migrate --seed
-& "C:\xampp\php\php.exe" artisan serve
-
-Blooming — Inventory & Sales Management System
+UTS Pemrograman Web 2
 
 Grow with grace. Manage with care.
+
+</div>
