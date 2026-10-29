@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bloom-wine: #572b3b;
+    --bloom-plum: #351c2a;
+    --bloom-rose: #e8a5ad;
+    --bloom-cream: #fff9f2;
+    --bloom-muted: #d9c5ce;
+    --bloom-border: rgba(255, 255, 255, 0.16);
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.bloom-content {
+    min-width: 0;
+}
+
+.bloom-content .page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.bloom-content .page-heading h1 {
+    margin: 0 0 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.bloom-content .page-heading p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.bloom-content .panel {
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 1px solid var(--bloom-border);
+    border-radius: 15px;
+    background: rgba(65, 31, 47, 0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.bloom-content form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+    margin-bottom: 18px;
+}
+
+.bloom-content form label {
+    color: var(--bloom-cream);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.bloom-content form input:not([type="checkbox"]):not([type="radio"]),
+.bloom-content form select,
+.bloom-content form textarea {
+    display: block;
+    width: 100%;
+    min-height: 42px;
+    padding: 11px 13px;
+    border: 1px solid #d9c5ce;
+    border-radius: 8px;
+    background: #fff9f2;
+    color: #351c2a;
+    font: inherit;
+    font-size: 12px;
+}
+
+.bloom-content form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.bloom-content form input:focus,
+.bloom-content form select:focus,
+.bloom-content form textarea:focus {
+    outline: 2px solid rgba(232, 165, 173, 0.6);
+    outline-offset: 1px;
+}
+
+.bloom-content .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.bloom-content .btn,
+.bloom-content form button,
+.bloom-content form a.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    min-height: 39px;
+    padding: 10px 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: var(--bloom-rose);
+    color: var(--bloom-plum);
+    font: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bloom-content .btn-light {
+    border-color: var(--bloom-border);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--bloom-cream);
+}
+
+.bloom-content .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.bloom-content .empty-state {
+    padding: 24px;
+    text-align: center;
+}
+
+.bloom-content .pagination {
+    margin-top: 18px;
+    overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    .bloom-content .panel {
+        padding: 16px;
+    }
+
+    .bloom-content .page-heading h1 {
+        font-size: 23px;
+    }
+
+    .bloom-content .form-actions {
+        justify-content: stretch;
+    }
+
+    .bloom-content .form-actions .btn,
+    .bloom-content .form-actions button {
+        flex: 1;
+    }
+}
