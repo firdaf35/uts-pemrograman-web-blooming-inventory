@@ -28,7 +28,7 @@ Blooming merupakan aplikasi berbasis web untuk mengelola inventaris dan transaks
 | Informasi | Keterangan |
 |---|---|
 | Nama Aplikasi | Blooming |
-| Mata Kuliah | Pemrograman Web 2 |
+| Mata Kuliah | Pemrograman Web  |
 | Jenis Tugas | Ujian Tengah Semester (UTS) |
 | Framework | Laravel |
 | Bahasa Pemrograman | PHP |
