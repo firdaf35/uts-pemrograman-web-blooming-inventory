@@ -110,7 +110,6 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-> Jangan mengunggah file `.env` ke GitHub.
 
 ---
 
@@ -144,7 +143,7 @@ php artisan migrate --seed
 | Staff | `staff@blooming.com` | Sesuai seeder |
 | User | `user@blooming.com` | Sesuai seeder |
 
-> Gunakan kredensial yang benar-benar dibuat oleh seeder proyek.
+
 
 ---
 
